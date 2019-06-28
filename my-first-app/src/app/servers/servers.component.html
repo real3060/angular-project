@@ -4,10 +4,10 @@
        type="text">
 <p>{{serverName}}</p>
 <button
-  (click)="serverCreated = !serverCreated"
+  (click)="serverCreated = onStatusChange()"
   class="btn btn-outline-info"
 >Add Server
 </button>
 <p *ngIf="serverCreated" >server was added!!!!</p>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 

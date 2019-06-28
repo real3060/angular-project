@@ -1,1 +1,5 @@
-<div >server component item <p [ngStyle]="{color: getColor(), fontWeight:'bold'}"> {{serverStatus}}</p></div>
+<div > {{'Server'}} with ID {{serverId}} is
+  <p [ngStyle]="{color: getColor(), fontWeight:'bold'}"
+  [ngClass]="{online: serverStatus === 'online'}"
+  > {{serverStatus}}</p>
+</div>
