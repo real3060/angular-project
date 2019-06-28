@@ -1,9 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="xs-col-12">
-      <h3>App component</h3>
-      <hr>
-      <app-servers></app-servers>
+      <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet architecto aut autem, consequuntur debitis enim eos laboriosam magnam minima modi odio perspiciatis possimus quae, quaerat quia sint tempore totam.</span><span>Atque aut corporis deserunt, earum expedita illum nulla omnis, quo repellat rerum sed tenetur unde voluptate. At consectetur cupiditate debitis deserunt expedita explicabo nobis optio placeat, quae, quasi quod rerum.</span><span>Aliquam amet consequatur debitis dignissimos doloremque fugit, harum ipsum iure laudantium magnam modi molestias nemo nisi omnis porro quas quisquam reiciendis suscipit tempora voluptate. Autem commodi fugiat praesentium quam ullam!</span><span>A aliquam aliquid aperiam blanditiis corporis cum eligendi esse fuga fugiat id illo in laudantium modi nam nemo odio porro quae quam quisquam quos rerum, sapiente ullam unde vel voluptatibus?</span><span>Architecto eius facilis ipsa officia sit. Asperiores iusto nesciunt odio. Magni, necessitatibus, nesciunt? Ab cupiditate delectus dicta enim et eveniet labore maxime quam quis, repellendus vitae voluptas voluptate. Porro, quibusdam.</span><span>Eos, minima, qui? Alias architecto asperiores consequuntur corporis deleniti dolor dolore ex fuga illum in, libero maiores modi molestias non nulla perferendis quidem ratione reiciendis repudiandae totam unde vel voluptatem.</span><span>Beatae doloremque ducimus perferendis voluptatem. Ab accusamus consectetur delectus distinctio, dolore, et fuga fugit hic iste labore laboriosam nihil non obcaecati odio placeat provident quod repellat sunt tempora vitae voluptatem?</span><span>Accusamus ad alias architecto assumenda dolorem dolorum earum ex fugit incidunt inventore ipsam labore laboriosam libero mollitia natus provident quaerat quos recusandae reiciendis saepe sapiente sunt, tempore tenetur totam veniam.</span>
+      </p>
     </div>
+    <input type="text"
+    [(ngModel)]="currentValue"
+    >
+    <button class="btn btn-primary" (click)="counterButton()">Display Details</button>
+    <p>
+      <div *ngIf="displayingP">Lorem
+    <p [ngStyle]="{color:'white', background: 'black'}">{{ secret }} was showed {{countButton}} times</p> ipsum dolor sit amet, consectetur adipisicing
+    elit. A Eius facilis illum libero. Adipisci, aliquid raesentium repellat sed voluptatem! Atque distinctio laboriosam
+    quis.
   </div>
+  <div *ngFor="let item of registryLog; let i = index" [ngClass]="{'color-white': i >= 5}"> {{item}}</div>
 </div>
